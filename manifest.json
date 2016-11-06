@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Getting started example",
+  "description": "This extension turns off pop-ups on the ReshyEge website",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "stop.png",
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "https://ajax.googleapis.com/"
+  ],
+  "content_scripts": [
+    {
+      "matches": ["https://math-ege.sdamgia.ru/*", "https://soc-ege.sdamgia.ru/*", "https://en-ege.sdamgia.ru/*"],
+      "js": ["delete.js"]
+    }
+  ]
+}
