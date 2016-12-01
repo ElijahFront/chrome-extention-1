@@ -1,13 +1,16 @@
 {
   "manifest_version": 2,
 
-  "name": "Getting started example",
-  "description": "This extension turns off pop-ups on the ReshyEge website",
-  "version": "1.0",
+  "name": "Решу егэ cleaner",
+  "description": "This extension turns off pop-ups at the ReshyEge website",
+  "version": "2.1.3",
+  "short_name":"ReshuEge cleaner",
+  "author":"Ilya Smetanin",
 
   "browser_action": {
     "default_icon": "stop.png",
-    "default_popup": "popup.html"
+    "default_popup": "popup.html",
+    "default_title": "Pop-ups info"
   },
   "permissions": [
     "activeTab",
@@ -15,7 +18,10 @@
   ],
   "content_scripts": [
     {
-      "matches": ["https://math-ege.sdamgia.ru/*", "https://soc-ege.sdamgia.ru/*", "https://en-ege.sdamgia.ru/*"],
+      "matches": ["https://math-ege.sdamgia.ru/*", "https://soc-ege.sdamgia.ru/*", "https://en-ege.sdamgia.ru/*", "https://mathb-ege.sdamgia.ru/*",
+      "https://inf-ege.sdamgia.ru/*", "https://rus-ege.sdamgia.ru/*", "https://de-ege.sdamgia.ru/*", "https://fr-ege.sdamgia.ru/*", "https://sp-ege.sdamgia.ru/*",
+      "https://phys-ege.sdamgia.ru/*", "https://chem-ege.sdamgia.ru/*", "https://bio-ege.sdamgia.ru/*", "https://geo-ege.sdamgia.ru/*",
+      "https://lit-ege.sdamgia.ru/*", "https://hist-ege.sdamgia.ru/*"],
       "js": ["delete.js"]
     }
   ]

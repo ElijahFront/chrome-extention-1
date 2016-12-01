@@ -4,9 +4,11 @@
  "browser_action" field in manifest.json contains the "default_popup" key with
  value "popup.html".
  -->
-<html>
+<html lang="ru">
   <head>
+    <meta charset="UTF-8">
     <title>Getting Started Extension's Popup</title>
+    <link rel="stylesheet" href="main.css">
     <style>
       body {
         font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
@@ -14,16 +16,13 @@
       }
     </style>
 
-    <!--
-      - JavaScript and HTML must be in separate files: see our Content Security
-      - Policy documentation[1] for details and explanation.
-      -
-      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
-     -->
-    <script src="popup.js"></script>
   </head>
   <body>
-    <h1>Removing annoying pop-ups!</h1>
+    <h1>Этот плагин уберет все надоедливые поп-апы на сайте "РешуЕгэ"</h1>
+    <div id="counter">
+
+    </div>
+    <span class="contacts">Разработчик: Илья Сметанин | <a href="mailto:cuprum19930@gmail.com">cuprum19930@gmail.com</a></span>
+    <script src="popup.js"></script>
   </body>
 </html>
-
