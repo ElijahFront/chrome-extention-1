@@ -15,9 +15,8 @@ function deletePopUps(){
     }
 });
     chrome.runtime.sendMessage(popup.number, function () {
-      console.log(`Removed ${popup.number} elem`);
     })
 
 }
 
-setInterval(deletePopUps, 2000);
+setInterval(deletePopUps, 100);
